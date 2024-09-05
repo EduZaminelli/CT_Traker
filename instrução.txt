@@ -1,0 +1,37 @@
+Descrição:
+
+Este script é utilizado para converter dados do usuário em um formato específico para análise, garantindo a segurança e o controle de acesso através de criptografia.
+
+1. Instruções de Instalação:
+
+Para instalar as dependências necessárias para este projeto, siga os passos abaixo:
+
+Abra um terminal ou prompt de comando.
+
+Execute o seguinte comando para instalar as bibliotecas listadas no arquivo requirements.txt:
+
+bash
+
+pip install -r requirements.txt
+
+2. Geração da Chave de Criptografia:
+
+Antes de executar o script principal, é necessário gerar a chave de criptografia. Execute o script generate_key.py para criar o arquivo secret.key:
+
+bash
+
+python generate_key.py
+
+3. Compilando o Script em um Executável:
+
+Para compilar o script em um executável para Windows, utilize o seguinte comando no terminal:
+
+bash
+
+pyinstaller --onefile --windowed --icon=pesquisar-usuario.ico --add-data="cfc.png;." --add-data="secret.key;." ct_traker.py
+
+Certifique-se de ter o PyInstaller instalado. Caso ainda não esteja instalado, utilize o comando abaixo para instalá-lo:
+
+bash
+
+pip install pyinstaller
